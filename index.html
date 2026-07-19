@@ -18,14 +18,25 @@
       text-align: center;
     }
 
-    <nav>
-      <a href="#about">About</a>
-      <a href="#" onclick="comingSoon()">Research</a>
-      <a href="#" onclick="comingSoon()">Publications</a>
-      <a href="#" onclick="comingSoon()">Projects</a>
-      <a href="#" onclick="comingSoon()">CV</a>
-    </nav>
-    
+    nav {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #66ccff;
+    }
+
     .card {
       max-width: 700px;
       padding: 40px;
@@ -42,45 +53,56 @@
       font-size: 1.2rem;
     }
 
-    a {
-      color: #66ccff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
     .button {
       display: inline-block;
       margin-top: 25px;
       padding: 12px 24px;
       background: #66ccff;
       color: #111;
+      text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .button:hover {
+      background: #8ad9ff;
+      text-decoration: none;
     }
   </style>
 </head>
 
 <body>
 
-<div class="card">
-  <h1>Hi</h1>
+  <nav>
+    <a href="#" onclick="comingSoon()">About</a>
+    <a href="#" onclick="comingSoon()">Research</a>
+    <a href="#" onclick="comingSoon()">Publications</a>
+    <a href="#" onclick="comingSoon()">Projects</a>
+    <a href="#" onclick="comingSoon()">CV</a>
+  </nav>
 
-  <p>
-    I'm John, a fourth year PhD student in Physics at Oregon state.
-  </p>
+  <div class="card">
+    <h1>Hi</h1>
 
-  <p>
-    I study the atmospheric component of the hydroclimate system.
-  </p>
+    <p>
+      I'm John, a fourth-year PhD student in Physics at Oregon State University.
+    </p>
 
-  <a class="button" href="https://github.com/glueball137">
-    Visit my GitHub
-  </a>
+    <p>
+      I study the atmospheric component of the hydroclimate system.
+    </p>
 
-</div>
+    <a class="button" href="https://github.com/glueball137" target="_blank">
+      Visit my GitHub
+    </a>
+  </div>
+
+  <script>
+    function comingSoon() {
+      alert("🚧 This section is under construction.");
+    }
+  </script>
 
 </body>
 </html>
