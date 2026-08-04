@@ -4,21 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Glueball137</title>
-
   <style>
-
     html {
       scroll-behavior: smooth;
     }
-
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background: #121212;
+
+
       color: white;
       text-align: center;
     }
-
     nav {
       position: fixed;
       top: 0;
@@ -28,7 +26,6 @@
       z-index: 1000;
       box-shadow: 0 2px 10px rgba(0,0,0,.4);
     }
-
     nav a {
       color: white;
       text-decoration: none;
@@ -36,11 +33,9 @@
       font-weight: bold;
       transition: color .3s;
     }
-
     nav a:hover {
       color: #66ccff;
     }
-
     section {
       min-height: 100vh;
       display: flex;
@@ -48,27 +43,22 @@
       align-items: center;
       padding: 80px 20px;
     }
-
     .card {
       max-width: 700px;
     }
-
     h1 {
       font-size: 3rem;
       margin-bottom: .3em;
     }
-
     h2 {
       font-size: 2.3rem;
       margin-bottom: .5em;
     }
-
     p {
       color: #bbb;
       line-height: 1.7;
       font-size: 1.2rem;
     }
-
     .button {
       display: inline-block;
       margin-top: 25px;
@@ -80,7 +70,6 @@
       font-weight: bold;
       transition: .3s;
     }
-
     .button:hover {
       background: #88ddff;
     }
@@ -92,8 +81,6 @@
     border: 4px solid #66ccff;
     margin-bottom: 25px;
   }
-
-
     .hero {
   display: flex;
   justify-content: space-between;
@@ -102,12 +89,10 @@
   max-width: 1000px;
   width: 100%;
 }
-
 .hero-text {
   flex: 1;
   text-align: left;
 }
-
 .profile {
   width: 300px;
   height: auto;
@@ -115,63 +100,66 @@
   border: 3px solid #66ccff;
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
-
     @media (max-width: 800px) {
-
   .hero {
     flex-direction: column;
     text-align: center;
   }
-
   .hero-text {
     text-align: center;
   }
-
   .profile {
     width: 220px;
   }
-
 }
+    .post {
+      text-align: left;
+      margin-bottom: 40px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 30px;
+    }
+    .post:last-child {
+      border-bottom: none;
+    }
+    .post h3 {
+      color: #66ccff;
+      margin-bottom: 5px;
+    }
+    .post-date {
+      color: #777;
+      font-size: .95rem;
+      margin-bottom: 10px;
+    }
   </style>
 </head>
-
 <body>
-
 <nav>
   <a href="#home">Home</a>
   <a href="#research">Research</a>
   <a href="#projects">Projects</a>
   <a href="#cv">CV</a>
   <a href="#fun stuff">fun stuff</a>
+  <a href="#blog">Blog</a>
 </nav>
-
 <section id="home">
   <div class="hero">
-
     <div class="hero-text">
-
       <h1>John Santos</h1>
-
       <p>
         Fourth-year PhD student in Physics at Oregon State University.
       </p>
-
       <p>
         I study the atmospheric component of the hydroclimate system.
       </p>
-
       <a class="button"
          href="https://github.com/glueball137"
          target="_blank">
          GitHub
       </a>
-
     </div>
-
     <img src="pathintegral.png"
          alt="Path integral illustration"
          class="profile">
-
   </div>
 </section>
 <section id="research">
@@ -182,7 +170,6 @@
     </p>
   </div>
 </section>
-
 <section id="projects">
   <div class="card">
     <h2>Projects</h2>
@@ -194,18 +181,15 @@
        Download Presentation (PDF)
     </a>
 
-      
     <p>Electrodynamics 1 final project: space-time approach to electromagnetism<p>
   </div>
 </section>
-
 <section id="cv">
   <div class="card">
     <h2>Curriculum Vitae</h2>
     <p>🚧 This section is under construction.</p>
   </div>
 </section>
-
 <section id="fun stuff">
   <div class="card">
     <h2>fun stuff</h2>
@@ -213,6 +197,18 @@
     <p>Speakable and Unspeakable in Quantum Mechanics: J.S. Bell<p>
   </div>
 </section>
+<section id="blog">
+  <div class="card">
+    <h2>Glueblog</h2>
 
+    <div class="post">
+      <h3>Post Title Here</h3>
+      <p class="post-date">August  4th, 2026</p>
+      <p>I'm a dumbass and terrible at coding, so this is my first attempt at a blog post</p>
+      <a class="button" href="posts/post-1.html">Read more</a>
+    </div>
+
+  </div>
+</section>
 </body>
 </html>
