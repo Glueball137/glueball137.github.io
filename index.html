@@ -132,6 +132,16 @@
     }
   </style>
 </head>
+<footer class="credit" style="padding: 20px 0;">
+  Views: <span id="views">…</span>
+</footer>
+<script>
+  fetch('https://glueball137.goatcounter.com/counter/' +
+        encodeURIComponent(location.pathname) + '.json')
+    .then(r => r.json())
+    .then(d => { document.getElementById('views').textContent = d.count; })
+    .catch(() => { document.getElementById('views').textContent = '0'; });
+</script>
 <body>
 <nav>
   <a href="#home">Home</a>
